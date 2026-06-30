@@ -1,0 +1,24 @@
+IoT-Botnet-Clustering/
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── environment.yml
+├── .gitignore
+├── CITATION.cff
+├── 0_run_pipeline.py
+│
+├── src/
+│   ├── 01_feature_extraction.py
+│   ├── 02_similarity.py
+│   ├── 03_clustering.py
+│   ├── 04_validation.py
+│   ├── 05_ttp_mitre.py
+│   ├── 06_end_report.py
+│   ├── log_utils.py
+│   └── viz_utils.py
+│
+├── dataset/
+│   └── README.md
+│
+├── output/
