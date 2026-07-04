@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 numpy>=1.26
 
 pandas>=2.2
@@ -16,4 +17,24 @@ tabulate>=0.9
 
 tqdm>=4.66
 
+=======
+numpy>=1.26
+
+pandas>=2.2
+
+matplotlib>=3.9
+
+seaborn>=0.13
+
+scikit-learn>=1.5
+
+scipy>=1.13
+
+networkx>=3.3
+
+tabulate>=0.9
+
+tqdm>=4.66
+
+>>>>>>> e2016f0cb8ba5c670411215df2ae26fd43f7ad6e
 openpyxl>=3.1
