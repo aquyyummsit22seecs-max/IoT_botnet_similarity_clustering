@@ -1,6 +1,12 @@
 """
+IoT botnet clusteringa & mitigations using similarity measures.
+
 Its our First step 1 of 6:  01_feature_extraction.py, for Behavioral Feature Extraction
 Parses IoT botnet sandbox analysis artifacts of all samples in IoT_BDA dataset and produces a binary feature matrix.
+
+Name: ABDUL QUYYUM 
+MSIT22SEECS
+NUST ISLAMABAD
 """
 
 import os, re, sys, json, glob
