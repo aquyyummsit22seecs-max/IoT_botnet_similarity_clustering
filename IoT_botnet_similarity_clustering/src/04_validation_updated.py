@@ -1,5 +1,12 @@
-"""04_validation_updated.py — Step 4 of 6: Cluster Quality Validation
-Internal and external validation for Hierarchical + Spectral clustering over Cosine and Jaccard matrices.
+"""
+IoT botnet clusteringa & mitigations using similarity measures.
+
+04_validation.d.py — Step 4 of 6: Cluster Quality Validation
+Internal and external validation for Hierarchical & Spectral clustering over Cosine and Jaccard matrices.
+
+Name: ABDUL QUYYUM
+MSIT22SEECS NUST
+ISLAMABAD
 """
 
 import os
