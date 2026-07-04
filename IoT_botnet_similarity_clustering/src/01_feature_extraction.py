@@ -1,6 +1,6 @@
 """
-01_feature_extraction.py — Step 1 of 6: Behavioral Feature Extraction
-Parses IoT malware sandbox samples and produces a binary feature matrix.
+Its our First step 1 of 6:  01_feature_extraction.py, for Behavioral Feature Extraction
+Parses IoT botnet sandbox analysis artifacts of all samples in IoT_BDA dataset and produces a binary feature matrix.
 """
 
 import os, re, sys, json, glob
@@ -13,7 +13,10 @@ import matplotlib.patches as mpatches
 from matplotlib.gridspec import GridSpec
 from log_utils import setup_script_logging
 
+#Provide dataset Path as per your settings/ we set it as per our PC directory / expertimental settings 
 DATASET = "../dataset/iot_bda_dataset/tasks/"
+
+#output directory for features related outputs
 OUT = "output/features"
 os.makedirs(OUT, exist_ok=True)
 os.makedirs("output/logs", exist_ok=True)
@@ -33,6 +36,7 @@ FAMILY_COLORS = {
 FAMILY_COLOR = lambda f: FAMILY_COLORS.get(f, "#7F8C8D")
 CAT_COLORS = {"Syscall": "#E74C3C", "Network": "#3498DB", "Behavioural": "#2ECC71"}
 
+#03_Feature categories we ued in out feature exngineering setup
 def feature_category(feat):
     if feat.startswith("sys_"): return "Syscall"
     if feat.startswith("net_"): return "Network"
@@ -50,6 +54,7 @@ if not samples:
 
 print(f"[INFO] Found {len(samples)} sample directories")
 
+#syscall tokens n=23 to extract 23 syscall related features from all samples artifacts
 SYSCALL_TOKENS = {
     "execve": "sys_exec",    "fork":     "sys_fork",    "clone":    "sys_clone",
     "kill":   "sys_kill",    "prctl":    "sys_prctl",   "setsid":   "sys_daemonize",
@@ -271,7 +276,7 @@ plt.close()
 print(f"[DONE] {OUT}/fig_feature_stats.png")
 
 
-# ── PNG 2 — Ground Truth Label Distribution ──
+# ── PNG Figure 2 — for Ground Truth Label Distribution ──
 families = label_dist.index.tolist()
 counts   = label_dist.values.tolist()
 n_total_lbl = len(all_labels)
@@ -328,7 +333,7 @@ plt.close()
 print(f"[DONE] {OUT}/fig_label_distribution.png")
 
 
-# ── PNG 3 — Feature Coverage ──
+# ── PNG 3 — Feature Coverage Figure──
 fig, axes = plt.subplots(1, 2, figsize=(18, max(9, len(feat_cols) * 0.33 + 2)))
 ax_chart = axes[0]
 df_plot  = df_summary.sort_values("coverage_pct")
