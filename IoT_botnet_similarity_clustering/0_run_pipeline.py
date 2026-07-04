@@ -1,6 +1,16 @@
 """
-0_run_pipeline.py — IoT Botnet Clustering Pipeline Orchestrator
+IoT botnet clusteringa & mitigations using similarity measures.
+
+0_run_pipeline.py — Its start of full Pipeline Execution
 Runs all six pipeline steps sequentially, validates expected outputs, and writes a consolidated log.
+
+Its our initial or startup script that kickstarts all steps in our research pipeline.
+Parses IoT botnet sandbox analysis artifacts of all samples in IoT_BDA dataset and produces a binary feature matrix.
+
+Name: ABDUL QUYYUM 
+MSIT22SEECS
+NUST ISLAMABAD
+
 """
 
 import os, sys, time, datetime, subprocess
@@ -17,7 +27,7 @@ SCRIPTS = [
     "src/01_feature_extraction.py",
     "src/02_similarity.py",
     "src/03_clustering.py",
-    "src/04_validation_updated.py",
+    "src/04_validation.py",
     "src/05_ttp_mitre.py",
     "src/06_end_report.py",
 ]
