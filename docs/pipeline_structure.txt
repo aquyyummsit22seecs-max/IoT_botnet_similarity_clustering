@@ -1,11 +1,7 @@
 IoT-Botnet-Clustering/
 │
 ├── README.md
-├── LICENSE
 ├── requirements.txt
-├── environment.yml
-├── .gitignore
-├── CITATION.cff
 ├── 0_run_pipeline.py
 │
 ├── src/
